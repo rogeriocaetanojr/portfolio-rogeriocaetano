@@ -1,7 +1,9 @@
 :root{
-    --primary-color: #222a33;
-    --text-color: rgb(178, 178, 178);
-
+    --primary-color: #0e0a1a;
+    --text-color: #ffffffc7;
+    --icons-color: #5adb94;
+    --nav-color: #ffffffc7;
+    --hoover-color: #5adb94;
 }
 /* reset básico */
 * {
@@ -30,8 +32,8 @@ body {
 
 /* cabeçalho */
 header {
-    background-color: #222a33;
-    padding: 1rem 2rem; 
+    background-color: var(--primary-color);
+    padding: 1.1rem 3.2rem; 
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -69,8 +71,8 @@ nav ul {
 }
 
 /* estilo dos links da navegação */
-nav ul li a {
-    color: rgb(178, 178, 178);
+nav ul li a{
+    color: var(--nav-color);
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
@@ -78,7 +80,7 @@ nav ul li a {
 
 /* hover nos links da navegação */
 nav ul li a:hover {
-    color: #667d86;
+    color: var(--hoover-color);
 }
 
 h1{
@@ -87,15 +89,19 @@ h1{
 
 /* estilo da logo (h1) com link */
 h1 a {
-    color: rgb(178, 178, 178);
+    color: var(--icons-color);
     text-decoration: none;
     cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 /* hover na logo */
 h1 a:hover {
-    color: #667d86;
+  color:var(--icons-color);
+  text-shadow: 0 0 7px #5adb94;
+  transition: .2s;
 }
+
 
 /* main vai ocupar espaço entre header e footer */
 main {
@@ -115,9 +121,14 @@ main {
     text-align: center;
 }
 
-h2, h3{
+h2{
     color: var(--text-color);
-    font-size: 3rem;
+    font-size: 4.5rem;
+}
+
+h3 {
+    color: var(--icons-color);
+    font-size: 2.2rem;
 }
 
 .hero-sobre{
@@ -125,7 +136,7 @@ h2, h3{
 }
 
 h4{
-    color: var(--text-color);
+    color: var(--icons-color);
     font-size: 1.8rem;
     margin-bottom: 2rem;
 }
@@ -149,8 +160,8 @@ h4{
 
 /* estilo geral do footer */
 footer {
-    background-color: #222a33; 
-    color: rgb(178, 178, 178);
+    background-color: var(--primary-color); 
+    color: var(--icons-color);
     padding: 1.5rem 0;
     font-size: 0.85rem;
     text-align: center;
@@ -174,19 +185,15 @@ footer .container {
 }
 
 .footer-contacts a {
-    display: inline-block;
+    display: flex;
 }
 
 .footer-contacts a img {
-    width: 1.5rem;
-    height: 1.5rem;
-    display: block;
-    filter: brightness(0) invert(0.7);
-    transition: filter 0.3s ease;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+  filter: brightness(0) saturate(100%) invert(100%) opacity(0.78);
 }
 
-/* texto do rodapé */
-footer p {
-    margin: 0;
-}
+
 
