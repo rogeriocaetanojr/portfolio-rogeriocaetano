@@ -1,3 +1,8 @@
+:root{
+    --primary-color: #222a33;
+    --text-color: rgb(178, 178, 178);
+
+}
 /* reset básico */
 * {
     margin: 0;
@@ -13,8 +18,7 @@ html, body {
 /* corpo da página com flex column para rodapé fixo */
 body {
     font-family: 'Roboto', sans-serif;
-    background: #222a33;
-    color: #fffbff;
+    background:var(--primary-color);
     font-size: 1rem; /* 16px */
     display: flex;
     flex-direction: column;
@@ -22,15 +26,11 @@ body {
     user-select: none;
 }
 
-/* main vai ocupar espaço entre header e footer */
-main {
-    flex: 1;
-}
+
 
 /* cabeçalho */
 header {
     background-color: #222a33;
-    color: #fffbff;
     padding: 1rem 2rem; 
     margin: 0;
     display: flex;
@@ -81,6 +81,10 @@ nav ul li a:hover {
     color: #667d86;
 }
 
+h1{
+    font-size: 2.4rem;
+}
+
 /* estilo da logo (h1) com link */
 h1 a {
     color: rgb(178, 178, 178);
@@ -93,44 +97,54 @@ h1 a:hover {
     color: #667d86;
 }
 
-/* layout da seção hero */
-.hero-content {
+/* main vai ocupar espaço entre header e footer */
+main {
+    flex: 1;
+}
+
+.hero{
     display: flex;
     align-items: center;
-    gap: 7rem;
+    justify-content: center;
+    height: 90%;
 }
 
-/* texto da seção hero */
-.hero-text {
-    flex: 1;
-    font-size: 1.2rem;
-    margin-top: 2rem;
+.hero-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-/* cor do texto da seção hero */
-.hero-text h2{
-    color: rgb(178, 178, 178);
-    margin-bottom: 1.3rem;
+h2, h3{
+    color: var(--text-color);
+    font-size: 3rem;
 }
 
-.hero-text p {
-    color: rgb(178, 178, 178);
+.hero-sobre{
+    margin: 4rem 4rem 1rem;
 }
 
-/* imagem da seção hero */
-.hero-image img {
-    width: 23rem;
-    height: 23rem;
-    border-radius: 50%;
-    object-fit: cover;
-    flex: 1;
-    font-size: 1.2rem;
-    margin-top: 2rem;
+h4{
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
 }
 
-/* espaçamento do hero em relação ao header */
-.hero {
-    margin-top: 6rem;
+.hero-sobre-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.text-sobre{
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+.hero-sobre img{
+    width: 25rem;
+    border-radius: min(50%);
 }
 
 /* estilo geral do footer */
@@ -171,16 +185,8 @@ footer .container {
     transition: filter 0.3s ease;
 }
 
-/* hover nos ícones do footer */
-.footer-contacts a:hover img {
-    filter: brightness(0) invert(0.5);
-}
-
 /* texto do rodapé */
 footer p {
     margin: 0;
 }
 
-.box-p{
-    background: green;
-}
