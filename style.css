@@ -1,0 +1,186 @@
+/* reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html e body para garantir altura 100% */
+html, body {
+    height: 100%;
+}
+
+/* corpo da página com flex column para rodapé fixo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #222a33;
+    color: #fffbff;
+    font-size: 1rem; /* 16px */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    user-select: none;
+}
+
+/* main vai ocupar espaço entre header e footer */
+main {
+    flex: 1;
+}
+
+/* cabeçalho */
+header {
+    background-color: #222a33;
+    color: #fffbff;
+    padding: 1rem 2rem; 
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    max-width: 100vw; 
+    box-sizing: border-box;
+}
+
+/* Ajuste container para header */
+header .container {
+    width: 100%; 
+    max-width: none; 
+    margin: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* container padrão centralizado */
+.container {
+    width: 100%;
+    max-width: 75rem; /* 1200px */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* navegação horizontal */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem; /* 20px */
+}
+
+/* estilo dos links da navegação */
+nav ul li a {
+    color: rgb(178, 178, 178);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+/* hover nos links da navegação */
+nav ul li a:hover {
+    color: #667d86;
+}
+
+/* estilo da logo (h1) com link */
+h1 a {
+    color: rgb(178, 178, 178);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* hover na logo */
+h1 a:hover {
+    color: #667d86;
+}
+
+/* layout da seção hero */
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+}
+
+/* texto da seção hero */
+.hero-text {
+    flex: 1;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+/* cor do texto da seção hero */
+.hero-text h2{
+    color: rgb(178, 178, 178);
+    margin-bottom: 1.3rem;
+}
+
+.hero-text p {
+    color: rgb(178, 178, 178);
+}
+
+/* imagem da seção hero */
+.hero-image img {
+    width: 23rem;
+    height: 23rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 1;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+/* espaçamento do hero em relação ao header */
+.hero {
+    margin-top: 6rem;
+}
+
+/* estilo geral do footer */
+footer {
+    background-color: #222a33; 
+    color: rgb(178, 178, 178);
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* layout interno do footer */
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* área de contatos com ícones SVG */
+.footer-contacts {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-contacts a {
+    display: inline-block;
+}
+
+.footer-contacts a img {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    filter: brightness(0) invert(0.7);
+    transition: filter 0.3s ease;
+}
+
+/* hover nos ícones do footer */
+.footer-contacts a:hover img {
+    filter: brightness(0) invert(0.5);
+}
+
+/* texto do rodapé */
+footer p {
+    margin: 0;
+}
+
+.box-p{
+    background: green;
+}
