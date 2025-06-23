@@ -3,7 +3,6 @@
     --text-color: #ffffffc7;
     --icons-color: #5adb94;
     --nav-color: #ffffffc7;
-    --hoover-color: #5adb94;
 }
 /* reset básico */
 * {
@@ -75,12 +74,16 @@ nav ul li a{
     color: var(--nav-color);
     text-decoration: none;
     font-weight: 700;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease;;
+}
+
+nav ul li a.ativo{
+    color: var(--icons-color);
 }
 
 /* hover nos links da navegação */
 nav ul li a:hover {
-    color: var(--hoover-color);
+    color: var(--icons-color);
 }
 
 h1{
@@ -92,16 +95,19 @@ h1 a {
     color: var(--icons-color);
     text-decoration: none;
     cursor: pointer;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    transition: color 0.1s ease, text-shadow 0.1s ease;
 }
 
 /* hover na logo */
 h1 a:hover {
   color:var(--icons-color);
-  text-shadow: 0 0 7px #5adb94;
+  text-shadow: 0 0 3px #5adb94;
   transition: .2s;
 }
 
+p{
+    color: var(--text-color);
+}
 
 /* main vai ocupar espaço entre header e footer */
 main {
@@ -158,6 +164,61 @@ h4{
     border-radius: min(50%);
 }
 
+/* Container geral das caixas */
+.hero-comp-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  padding: 4rem 4rem;
+}
+
+/* Cada caixa */
+.caixa {
+  background-color: #11192652;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 3px var(--icons-color);
+  border: 1px solid var(--icons-color);
+}
+
+
+
+/* Título das caixas */
+.caixa h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--icons-color);
+  font-weight: bold;
+  text-shadow: 0 0 1px var(--icons-color);
+}
+
+
+/* Container dos ícones */
+.icones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Ícones individuais */
+.icones img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.7s;
+}
+
+.icones img:hover {
+  transform: scale(1.1);
+}
+
+
 /* estilo geral do footer */
 footer {
     background-color: var(--primary-color); 
@@ -192,8 +253,13 @@ footer .container {
     width: 2rem;
     height: 2rem;
     display: flex;
-  filter: brightness(0) saturate(100%) invert(100%) opacity(0.78);
+    filter: brightness(0) saturate(100%) invert(100%) opacity(0.78);
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.footer-contacts a img:hover{
+    filter: brightness(0) saturate(100%) invert(75%) sepia(38%) saturate(369%) hue-rotate(97deg) brightness(101%) contrast(99%);
+    transform: translateY(-8px);
+}
 
 
